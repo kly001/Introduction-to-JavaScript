@@ -127,11 +127,35 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, weight){
-    /*add your code here*/
+function hungryDog(weight,age){
+  if(age>=1 && weight>15) {
+      return(weight*0.02)
+  } else {
+    if(age>=1 && weight>=11) {
+      return(weight*0.03)
+    } else {
+      if (age>=1 && weight>=6) {
+        return(weight*0.04)
+      } else {
+        if (age>=1 && weight<6) {
+          return(weight*0.05)
+        } else {
+          if (age>=0.58333) {
+            return(weight*0.04)
+          } else {
+            if (age>=0.33333){
+              return(weight*0.05)
+            } else {
+              return(weight*0.1)
+            }
+          }
+        }
+      }
+    }
   }
+}
 
-
+console.log(hungryDog(15,1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -238,16 +262,14 @@ Using the grade function below do the following:
             } else {
                 if (num>=60) {
                     return("you got a D")
-                }
-                else {
+                } else {
                      return("you got an F")   
                 }
             }
         }
-    }
-    
+    } 
 }
-console.log(grade(3))
+console.log(grade(73))
   
   
 
